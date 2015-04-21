@@ -253,4 +253,11 @@ public class Point
         this.sliced = sliced;
         return this;
     }
+    
+    public Point clearValues() {
+        this.x = null;
+        this.y = null;
+        this.z = null;
+        return this;
+    }
 }
