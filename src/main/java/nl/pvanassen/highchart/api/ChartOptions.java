@@ -2,6 +2,7 @@ package nl.pvanassen.highchart.api;
 
 
 import nl.pvanassen.highchart.api.base.BaseObject;
+import nl.pvanassen.highchart.api.plotoption.PlotOptionsSeries;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
 public class ChartOptions extends BaseObject {
@@ -18,7 +19,7 @@ public class ChartOptions extends BaseObject {
 
     private PlotOptions plotOptions;
 
-    private JsonArray<Series> series;
+    private JsonArray<PlotOptionsSeries> series;
 
     private Title title;
 
@@ -72,9 +73,9 @@ public class ChartOptions extends BaseObject {
         return plotOptions;
     }
 
-    public JsonArray<Series> getSeries() {
+    public JsonArray<PlotOptionsSeries> getSeries() {
         if (series == null) {
-            series = new JsonArray<Series>();
+            series = new JsonArray<PlotOptionsSeries>();
         }
         return series;
     }
